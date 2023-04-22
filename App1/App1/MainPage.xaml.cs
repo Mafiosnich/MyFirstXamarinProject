@@ -21,8 +21,9 @@ namespace App1
             new Entry()
             {
                 Placeholder = "Введите коэфицент a",
-                BackgroundColor = Color.White,
-                TextColor = Color.Black,
+                PlaceholderColor = Color.FromHex("#BEBEBE"),
+                BackgroundColor = Color.FromHex("#282828"),
+                TextColor = Color.FromHex("#DCDCDC"),
                 FontSize = 20,
                 Margin = new Thickness(20, 0, 20, 10),
                 HorizontalOptions = LayoutOptions.Fill,
@@ -33,8 +34,9 @@ namespace App1
             new Entry()
             {
                 Placeholder = "Введите коэфицент b",
-                BackgroundColor = Color.White,
-                TextColor = Color.Black,
+                PlaceholderColor = Color.FromHex("#BEBEBE"),
+                BackgroundColor = Color.FromHex("#282828"),
+                TextColor = Color.FromHex("#DCDCDC"),
                 FontSize = 20,
                 Margin = new Thickness(20, 0, 20, 10),
                 HorizontalOptions = LayoutOptions.Fill,
@@ -45,12 +47,14 @@ namespace App1
             new Entry()
             {
                 Placeholder = "Введите коэфицент c",
-                BackgroundColor = Color.White,
-                TextColor = Color.Black,
+                PlaceholderColor = Color.FromHex("#BEBEBE"),
+                BackgroundColor = Color.FromHex("#282828"),
+                TextColor = Color.FromHex("#DCDCDC"),
                 FontSize = 20,
                 Margin = new Thickness(20, 0, 20, 10),
                 HorizontalOptions = LayoutOptions.Fill,
                 Keyboard = Keyboard.Numeric,
+                
                 ClearButtonVisibility = ClearButtonVisibility.WhileEditing
             }
         };
@@ -77,6 +81,7 @@ namespace App1
         
         private async void ResultButtonClicked(object sender, EventArgs e)
         {
+            
 
             bool hasInvalid = Inputs.Any(input => string.IsNullOrEmpty(input.Text) || input.Text[0] == '0');
 
@@ -95,7 +100,7 @@ namespace App1
         {
             StackLayout multipliers = new StackLayout()
             {
-                BackgroundColor = Color.White
+                BackgroundColor = Color.FromHex("#282828")
             };
 
             Label[] Labels = new Label[]
@@ -103,16 +108,16 @@ namespace App1
                 new Label()
                 {
                     Text = "Коэфицент a:",
-                    TextColor = Color.Black,
+                    TextColor = Color.FromHex("#DCDCDC"),
                     FontSize = 25,
-                    Margin = new Thickness (22, 0, 20, 5),
+                    Margin = new Thickness (22, 30, 20, 5),
                     HorizontalOptions = LayoutOptions.Fill
                 },
 
                 new Label()
                 {
                     Text = "Коэфицент b:",
-                    TextColor = Color.Black,
+                    TextColor = Color.FromHex("#DCDCDC"),
                     FontSize = 25,
                     Margin = new Thickness(22, 30, 20, 5),
                     HorizontalOptions = LayoutOptions.Fill
@@ -121,7 +126,7 @@ namespace App1
                 new Label()
                 {
                     Text = "Коэфицент c:",
-                    TextColor = Color.Black,
+                    TextColor = Color.FromHex("#DCDCDC"),
                     FontSize = 25,
                     Margin = new Thickness(22, 30, 20, 5),
                     HorizontalOptions = LayoutOptions.Fill
@@ -140,7 +145,8 @@ namespace App1
             {
                 HorizontalOptions = LayoutOptions.Fill,
                 Text = "Вычислить",
-                TextColor = Color.Black,
+                TextColor = Color.FromHex("#DCDCDC"),
+                BackgroundColor = Color.FromHex("#484848"),
                 Margin = new Thickness(20, 0, 20, 0),
                 FontSize = 15
             };

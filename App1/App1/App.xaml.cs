@@ -12,8 +12,8 @@ namespace App1
 
             MainPage = new NavigationPage(new MainPage())
             {
-                BarBackgroundColor = Color.White,
-                BarTextColor = Color.Black,
+                BarBackgroundColor = Color.FromHex("#181818"),
+                BarTextColor = Color.FromHex("#DCDCDC"),
             };
         }
 
